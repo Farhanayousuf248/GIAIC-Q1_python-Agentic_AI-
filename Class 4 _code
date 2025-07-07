@@ -1,0 +1,178 @@
+print("00_count_nums")
+
+def count_nums():
+  count_dict = {}
+  while True:
+    user_input = input("Enter a number for ('Exit to quit): ")
+    if user_input.title() == "Exit":
+      break
+    if user_input.isdigit():
+      num = int(user_input)
+      count_dict[num] = count_dict.get(num, 0) + 1
+    else:
+      print("Invalid input. Please enter a number or 'Exit'. ")
+  return count_dict22
+
+def display_counts(count_dict):
+  print("\n Number counts:")
+  for key, value in count_dict.items():
+    print(f"{key} appears {value} times")
+
+if __name__ == "__main__":
+  counts =count_nums()
+  display_counts(counts)
+
+print("01_phonebook")
+
+def add_contact(phonebook):
+  name = input("Enter contact's name: ")
+  number = input("Enter contact's number: ")
+
+
+  if name in phonebook:
+    print(f"{name} already exsit in phonebook.")
+  else:
+    phonebook[name] = number
+    print(f"{name} added to phonebook.")
+
+def search_contact(phonebook):
+  name = input("Enter contact name to search: ")
+
+  if name in phonebook:
+    print(f"{name}'s number is {phonebook[name]}")
+  else:
+    print(f"{name} not found in phonebook. ")
+
+def delete_contact(phonebook):
+  name = input("Enter contact name to delete: ")
+  if name in phonebook:
+    del phonebook[name]
+    print(f"{name} deleted from phoneook.")
+  else:
+    print(f"{name} not found in phonebook.")
+
+
+def display_phonebook(phonebook):
+  print("\n Phonebook:")
+  for name, number in phonebook.items():
+    print(f"{name}: {number}")
+  else:
+    print("Phonebook is empty.")
+
+if __name__ == "__main__":
+  phonebook = {}
+print("01_phonebook")
+
+def add_contact(phonebook):
+  name = input("Enter contact's name: ")
+  number = input("Enter contact's number: ")
+
+
+  if name in phonebook:
+    print(f"{name} already exsit in phonebook.")
+  else:
+    phonebook[name] = number
+    print(f"{name} added to phonebook.")
+
+def search_contact(phonebook):
+  name = input("Enter contact name to search: ")
+
+  if name in phonebook:
+    print(f"{name}'s number is {phonebook[name]}")
+  else:
+    print(f"{name} not found in phonebook. ")
+
+def delete_contact(phonebook):
+  name = input("Enter contact name to delete: ")
+  if name in phonebook:
+    del phonebook[name]
+    print(f"{name} deleted from phoneook.")
+  else:
+    print(f"{name} not found in phonebook.")
+
+
+def display_phonebook(phonebook):
+  print("\n Phonebook:")
+  for name, number in phonebook.items():
+    print(f"{name}: {number}")
+  else:
+    print("Phonebook is empty.")
+
+if __name__ == "__main__":
+  phonebook = {}
+  while True:
+    print("\n Phonebook Menu:")
+    print("1. Add contact")
+    print("2. Search contact")
+    print("3. Delete contact")
+    print("4. Display phonebook")
+    print("5. Exit")
+    choice = input("Enter your choice (1-5): ")
+    if choice == "1":
+      add_contact(phonebook)
+    elif choice == "2":
+      search_contact(phonebook)
+    elif choice == "3":
+      delete_contact(phonebook)
+    elif choice == "4":
+      display_phonebook(phonebook)
+    elif choice == "5":
+      print("Exiting phonebook. Goodbye!")
+      break
+    else:
+      print("Invalid choice. Please enter a number between 1 and 5.")
+print("02_pop_up_shop")
+
+def total_cost():
+  fruits_price = {
+    "apple": 2.5,
+    "durian": 5.0,
+    "jackfruit": 3.0,
+    "kiwi": 12.5,
+    "rambutan": 4.0,
+    "mango": 15.0
+}
+  total_cost = 0
+
+  for fruit, price in fruits_price.items():
+    while True:
+      try:
+        quantity = int(input(f"How many {fruit} do you want? "))
+        if quantity < 0:
+          print("Invalid input. Please enter a non-negative number.")
+        else:
+          total_cost += price * quantity
+          break
+      except ValueError:
+        print("Invalid input. Please enter a number.")
+
+  print(f"Total cost: ${total_cost:.2f}")
+
+if __name__ == "__main__":
+  total_cost()
+import hashlib
+print("03_powerful_passwords")
+
+
+def hash_password(password):
+  return hashlib.sha256(password.encode()).hexdigest()
+
+
+stored_logins = {
+    "user1@example.com": hash_password("password123"),
+    "user2@example.com": hash_password("securePassword!456")
+}
+
+def login(email, password):
+  if email in stored_logins:
+    return stored_logins[email] == hash_password(password)
+  return False
+
+if __name__ == "__main__":
+  email = input("Enter your email: ")
+  password = input("Enter your password: ")
+
+  if login(email, password):
+    print("Login successful!")
+  else:
+    print("Invalid email or password.")
