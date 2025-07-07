@@ -1,0 +1,143 @@
+print("hellow world")
+print("farhana is my name")
+print("my age is 18 years")
+
+#    VARIABLES 
+uname="farhana"
+print(uname)
+
+
+fav_celebrety="my parents"
+print(fav_celebrety)
+
+
+
+number="99999"
+print(number)
+
+
+
+
+
+important_no="twentyfour"
+print(important_no)
+
+
+sentence="my name is"
+name="farhanayousuf"
+print(sentence  + name)
+
+
+# data types
+#string='str' #  *use in alphabets & names etc*
+#integers='int'#  *use in numbers *
+#boolian ='bool'#  *use in true or false* 
+#only use  double coding in string statement
+
+
+name:str= "farhana" 
+print(name)
+age:int=18
+print(age)
+in_active:bool=True
+print(in_active)
+
+
+#MARKS SHEET
+#Ready now
+
+totalmarks="80"
+urdu:int="30"
+maths:int="30"
+english:int="20"
+print(totalmarks)
+
+allowed:bool="true"
+print(allowed)
+
+
+
+# OPERATORS 
+ ##there are 4 
+#arthmatic operators    use for  + , - ,* , \ ,
+
+
+print(7+5)
+print(10-5)
+print(8/2)
+print(5*2)
+
+
+#assingment operators  with in assign for operators
+
+num1:int=5
+num2:int=5
+
+sum:int=num1-num2
+print(sum)
+
+sum:int=num1+num2
+print(sum)
+
+sub:int=num1-num2
+print(sub)
+
+mul:int=num1%num2
+print(mul)
+
+div:int=num1/num2
+print(div)
+
+#double arthmatic operator are use 
+print(5//2)
+print(5**2)
+
+x=5
+x:int=10
+print(x)
+# old value of x is 10 and +5
+
+x=x+5
+x=x-5
+print(x)
+
+x=x*2
+x=x%3      #ctrl+c
+
+#camparesion operators
+##   CAMPARESION VALUE 
+## 2 VALUE  KO CAMPARE KRNE WALA 
+  #  '==' :-   (EQUALS to)   
+  #  '>' :-   (GREATER THEN)
+  #  '<'  :-  (LESS THEN)
+  #  '>=  :-  (GREATER THEN OR EQUALS TO )
+  #  '<=  :-  (LESS THEN OR EQUALS TO)
+  #  '!'  :-  (NO EQUALS TO)
+   
+   # CAMPARESION OPERATORS are given answer is TRUE & FALSE 
+num1:int =10
+num2:int =10
+print(num1 =num2)
+
+num2=20
+num1=10
+print(num1<=num2)
+print(num1!num2)
+print(num1<num2)
+print(num1>num2)
+print(num1==num2)
+
+#logical operators
+#THERE ARE 3 TYPES OF LOGICAL OPERATORS
+
+#   "AND"  "OR"  "NOT"
+# AND  rule is all value is true
+#  agr ik bhi value ture nhi hogi to ye hmmme answre false daega
+
+num1:int=20
+num2;int=10
+# AND CODITION 
+num1>10
+num1<30
+me b0lrhi ho ke is variable me maximum maxsimum 10 or minimum minimum 30 h0 
+print(num1>10 and num1<30)
